@@ -24,14 +24,7 @@
             </v-list>
         </v-navigation-drawer>
 
-        <v-card
-                color="grey lighten-4"
-                flat
-                height="200px"
-                tile
-                app
-
-        >
+        <div>
             <v-toolbar dark color="primary"
                        >
                 <v-app-bar-nav-icon
@@ -40,7 +33,7 @@
                 ></v-app-bar-nav-icon>
 
                 <v-toolbar-title>
-                    Ad aplication
+                    <router-link to="/" tag="span" class="pointer">Ad aplication</router-link>
                 </v-toolbar-title>
 
                 <v-spacer></v-spacer>
@@ -54,7 +47,7 @@
                         {{ link.title }}</v-btn>
                 </v-toolbar-items>
             </v-toolbar>
-        </v-card>
+        </div>
 
 
 
@@ -82,6 +75,8 @@
     }
 </script>
 
-<style>
-
+<style scoped>
+    .pointer {
+        cursor: pointer;
+    }
 </style>
