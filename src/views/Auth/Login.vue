@@ -1,9 +1,9 @@
 <template>
-    <v-container fluid>
-    <v-row class="align-center" >
-        <v-col cols="12" sm="6" offset-sm="3" class="align-center">
+    <v-container>
+    <v-row class=" mt-10" >
+        <v-col cols="12" sm="6" offset-sm="3" >
 
-            <v-card >
+            <v-card>
                 <v-toolbar color="#E0E0E0" >
                     <v-toolbar-title>
                         <h3>Login form</h3>
@@ -35,14 +35,15 @@
                                     :counter="6"
                                     :rules="passwordRules"
                             ></v-text-field>
-
-
-                            <v-btn
-                                    color="primary"
-                                    @click="onSubmit"
-                            >Login</v-btn>
-
                         </v-form>
+                    </v-container>
+                    <v-container>
+                        <v-btn
+                                color="primary"
+                                @click="onSubmit"
+                                style="margin-left: 20px"
+                                :disabled="!valid"
+                        >Login</v-btn>
                     </v-container>
                 </v-list>
             </v-card>
@@ -69,15 +70,16 @@
             }
         },
         methods: {
-            onSubmit() {
-                if (this.$refs.form.validate()) {
-                    const user = {
-                       email: this.email,
-                        password: this.password
-                    }
-
-                }
-            }
+            // onSubmit() {
+            //     if (this.$refs.form.validate()) {
+            //         const user = {
+            //            email: this.email,
+            //             password: this.password
+            //         }
+            //
+            //         console.log(user)
+            //     }
+            // }
         }
     }
 </script>
