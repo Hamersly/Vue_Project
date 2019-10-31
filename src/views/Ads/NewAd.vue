@@ -104,13 +104,14 @@
         methods: {
             createAd() {
                 if (this.$refs.form.validate()) {
-                    // //logic
-                    // const ad = {
-                    //     title: this.title,
-                    //     description: this.description,
-                    //     promo: this.promo,
-                    // }
-
+                    //logic
+                    const ad = {
+                        title: this.title,
+                        description: this.description,
+                        promo: this.promo,
+                        imageSrc: 'https://images11.popmeh.ru/upload/img_cache/5b3/5b322ef45b5f766fd0d2f04023e98610_fitted_800x3000.jpg'
+                    }
+                    this.$store.dispatch('createAd', ad)
                 }
             }
         },

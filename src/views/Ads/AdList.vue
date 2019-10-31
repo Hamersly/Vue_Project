@@ -12,7 +12,7 @@
 
                             class="mx-auto elevation-10 mb-5 justify-lg"
                             outlined
-                            v-for="ad in ads" :key="ad.id"
+                            v-for="ad in myAds" :key="ad.id"
                     >
 
                         <v-list-item>
@@ -80,31 +80,9 @@
 
 <script>
     export default {
-        data() {
-            return{
-                ads: [
-                    {
-                        title: 'First ad',
-                        description: 'Hello, i am description',
-                        promo: false,
-                        imageSrc: 'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRFBmWRXsx_Gbk8c8brCcjtHGrGPgUktU8KvFvIDqWlN5daC7sT',
-                        id: '124'
-                    },
-                    {
-                        title: 'First ad',
-                        description: 'Hello, i am description',
-                        promo: false,
-                        imageSrc: 'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRFBmWRXsx_Gbk8c8brCcjtHGrGPgUktU8KvFvIDqWlN5daC7sT',
-                        id: '125'
-                    },
-                    {
-                        title: 'First ad',
-                        description: 'Hello, i am description',
-                        promo: false,
-                        imageSrc: 'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRFBmWRXsx_Gbk8c8brCcjtHGrGPgUktU8KvFvIDqWlN5daC7sT',
-                        id: '126'
-                    },
-                ]
+        computed: {
+            myAds () {
+                return this.$store.getters.myAds
             }
         }
     }
