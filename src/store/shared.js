@@ -7,7 +7,7 @@ export default {
         setLoading(state, payload) {
             state.loading = payload
         },
-        setEerror(state, payload) {
+        setError(state, payload) {
             state.error = payload
         },
         clearError(state) {
@@ -18,8 +18,8 @@ export default {
         setLoading({commit}, payload) {
             commit('setLoading', payload)
         },
-        setEerror({commit}, payload) {
-            commit('setEerror', payload)
+        setError({commit}, payload) {
+            commit('setError', payload)
         },
         clearError({commit}) {
             commit('clearError')

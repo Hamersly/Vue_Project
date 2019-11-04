@@ -23,6 +23,11 @@ new Vue({
           messagingSenderId: "1004054551163",
           appId: "1:1004054551163:web:02487a50e39dcdf51de0de",
           measurementId: "G-TD03RPKBWP"
+        });
+        fb.auth().onAuthStateChanged(user => {
+            if (user) {
+                this.$store.dispatch('autoLoginUser', user)
+            }
         })
     },
     render: h => h(App)
